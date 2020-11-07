@@ -10,17 +10,11 @@ import SwiftUI
 struct FrameworkDetailView: View {
     @Environment(\.presentationMode) var presentation
     @State private var isShowing = false
+    
     let framework: Framework
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            Button(action: { presentation.wrappedValue.dismiss() }, label: {
-                Image(systemName: "xmark")
-                    .imageScale(.large)
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(Color(.label))
-                    .padding()
-            })
             ScrollView {
                 VStack(spacing: 20) {
                     Image(framework.imageName)
@@ -43,6 +37,13 @@ struct FrameworkDetailView: View {
                 }
                 .padding(.horizontal)
             }
+            Button(action: { presentation.wrappedValue.dismiss() }, label: {
+                Image(systemName: "xmark")
+                    .imageScale(.large)
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(Color(.label))
+                    .padding()
+            })
         }
         .fullScreenCover(isPresented: $isShowing) {
             SafariView(url: URL(string: framework.urlString)!)
