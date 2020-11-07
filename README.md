@@ -5,4 +5,4 @@ An App that gives an overview of Apples Frameworks - [SwiftUI Fundamentals Cours
 ![3](3.png)
 
 
-[SwiftUI Fundamentals Course by Sean Allen]: seanallen.teachable.com
+[SwiftUI Fundamentals Course by Sean Allen]: https://seanallen.teachable.com
